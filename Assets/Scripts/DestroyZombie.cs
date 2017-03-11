@@ -3,23 +3,44 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DestroyZombie : MonoBehaviour {
-    //private float breakForce = 150f;
-
-	// Use this for initialization
-//	void Start () {
-  //      GetComponent<Rigidbody>.collisionDetectionMode = CollosionDetectionMode.Continuous;
-
-            	
-	//}
+    
 	
-	void OnCollisionEnter(Collision collision)
-    {
+	//void OnCollisionEnter(Collision collision)
+ //   {
        
-            GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
-            foreach (GameObject enemy in enemies)
+   //         GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
+     /*       foreach (GameObject enemy in enemies)
             {
                 Destroy(enemy);
             }
 
+    }*/
+
+    private float breakForce = 150f;
+
+    private void Start()
+    {
+        GetComponent<Rigidbody>().collisionDetectionMode = CollisionDetectionMode.Continuous;
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+            if (collision.collider.gameObject.tag == "enemy")
+            {
+                Destroy(collision.gameObject);
+            }
+        }
+    
+
+    
+    
+
+    
 }
+
+
+
+
+
+
+
