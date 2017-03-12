@@ -14,7 +14,7 @@ public class ZombieSpawn : MonoBehaviour {
               
     }
 	
-    void SpawnZombie()
+    public void SpawnZombie()
     {
         if (count < 5)
         {

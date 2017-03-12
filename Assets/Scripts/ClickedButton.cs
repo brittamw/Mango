@@ -5,11 +5,10 @@ using UnityEngine.UI;
 
 public class ClickedButton : MonoBehaviour {
 
-    
-
-    void Start()
+   
+   public void ClickTest()
     {
-       Debug.Log("You have clicked the button!");
+        Debug.Log("You have clicked the button!");
     }
 
     
