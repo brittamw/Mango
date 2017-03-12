@@ -16,7 +16,7 @@ public class ZombieSpawn : MonoBehaviour {
 	
     void SpawnZombie()
     {
-        if (count < 10)
+        if (count < 5)
         {
             GameObject zombie = (GameObject)Instantiate(zombieagent, this.transform.position, Quaternion.identity);
             zombie.GetComponent<AgentNavigationScript>().Target = targetObject.transform;
