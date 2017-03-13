@@ -15,8 +15,9 @@ public class DestroyZombie : MonoBehaviour {
     {
             if (collision.collider.gameObject.tag == "enemy")
             {
+                
                 ani.SetTrigger("back_fall");
-                Destroy(collision.gameObject);
+                //Destroy(collision.gameObject);
             }
         }
     
